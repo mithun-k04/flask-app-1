@@ -1,0 +1,9 @@
+<h2>Login</h2>
+<form method="POST">
+    Username: <input name="username"><br>
+    Password: <input name="password" type="password"><br>
+    <input type="submit" value="Login">
+</form>
+{% with messages = get_flashed_messages() %}
+    {% for msg in messages %}<p>{{ msg }}</p>{% endfor %}
+{% endwith %}

@@ -1,0 +1,14 @@
+<h2>Admin Dashboard</h2>
+<form method="POST" enctype="multipart/form-data">
+    Upload Admin Image: <input type="file" name="image" required><br>
+    <input type="submit" value="Upload">
+</form>
+
+<h3>Users and Credits:</h3>
+<ul>
+    {% for user, credits in users %}
+        <li>{{ user }}: {{ credits }} points</li>
+    {% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
